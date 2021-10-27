@@ -1,0 +1,18 @@
+<aura:component description="PMGSEditActionOverride" implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" access="global">
+    <aura:attribute name="recordId" type="String"/>
+
+    <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <h2 class="slds-text-heading_medium">Edit {!v.Name}</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium slds-grid slds-wrap ">
+                <h1>Redirect to custom app</h1>
+            </div>
+            <div class="slds-modal__footer">
+                <lightning:button variant="brand" label="Goto custom App" onclick="{!c.navigate}" />
+                <lightning:button variant="neutral" label="Cancel" onclick="{!c.handleCancel}" />
+            </div>
+        </div>
+    </div>
+</aura:component>
